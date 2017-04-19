@@ -19,6 +19,35 @@ Początek pliku.
 2B,410,CEK,2968,OVB,4078,,0,CR2
 ```
 
+Przykładowy dokument po imporcie.
+
+```js
+{
+	"_id" : ObjectId("58f740c71d993709c60c4910"),
+	"airline" : "2B",
+	"airline_id" : 410,
+	"source_airport" : "AER",
+	"source_airport_id" : 2965,
+	"dest_airport" : "KZN",
+	"dest_airport_id" : 2990,
+	"codeshare" : "",
+	"stops" : 0,
+	"equipment" : "CR2"
+}
+```
+
+### Pola
+
+- airline - Kod linii lotniczej
+- airline_id - Id linii lotniczej
+- source_airport - Kod lotniska startowego
+- source_airport_id - Id lotniska startowego
+- dest_airport - Kod lotniska docelowego
+- dest_airport_id - Id lotniska docelowego
+- codeshare - Czy obslugiwane przez linię lotniczą
+- stops - Liczba przesiadek
+- equipment - Typ(y) samolotów
+
 ## Import
 
 Dane nie zawierają nazw pól, dlatego trzeba je dodać przy imporcie.
