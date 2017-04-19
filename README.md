@@ -1,15 +1,19 @@
 # Projekt na egzamin
 ## Dane
 
-### Zbiór danych
-
 Nazwa: **Routes**
 
-Źródło: **_[Pobierz](https://link)_**
+Źródło: **_[Pobierz](https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.dat)_**
 
-Plik: **_Routes.csv_**
+Plik: **_routes.dat_**
 
-Rekordy: **_?_**
+Rekordy: **_67663_**
+
+## Import
+
+```
+mongoimport -d airport -c routes --type csv --file routes.dat --fields "airline,airline_id,source_airport,source_airport_id,dest_airport,dest_airport_id,codeshare,stops,equipment"
+```
 
 ## Agregacja
 
