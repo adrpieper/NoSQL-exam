@@ -73,7 +73,7 @@ db.routes.aggregate(
         direct_routes : { $push : "$dest_airport" }
         }
     },
-    // Stage2 - przesukanie grafu
+    // Stage2 - przeszukanie grafu połączeń
     {
           $graphLookup: {
              from: "routes",
