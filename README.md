@@ -3,7 +3,8 @@
 
 Nazwa: **Routes**
 
-Źródło: **_[Pobierz](https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.dat)_**
+Źródło: **_[OpenFlights](http://openflights.org/data.htm)_**, 
+**_[Pobierz](https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.dat)_**
 
 Plik: **_routes.dat_**
 
@@ -112,3 +113,6 @@ Przygotowuje dane do wyświetlenia. Usuwam powtarzające się lotnika docelowe.
 ### Stage5 - filtr, wyświetlanie tylko interesujących wyników
 
 Zostawiam tylko lotniska, z których można dostać się do ABB (Asaba International Airport).
+
+## Dokumentacja
+[GraphLookup](https://docs.mongodb.com/manual/reference/operator/aggregation/graphLookup)
