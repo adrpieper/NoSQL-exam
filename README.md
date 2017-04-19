@@ -9,7 +9,19 @@ Plik: **_routes.dat_**
 
 Rekordy: **_67663_**
 
+Początek pliku.
+
+```
+2B,410,AER,2965,KZN,2990,,0,CR2
+2B,410,ASF,2966,KZN,2990,,0,CR2
+2B,410,ASF,2966,MRV,2962,,0,CR2
+2B,410,CEK,2968,KZN,2990,,0,CR2
+2B,410,CEK,2968,OVB,4078,,0,CR2
+```
+
 ## Import
+
+Dane nie zawierają nazw pól, dlatego trzeba je dodać przy imporcie.
 
 ```
 mongoimport -d airport -c routes --type csv --file routes.dat --fields "airline,airline_id,source_airport,source_airport_id,dest_airport,dest_airport_id,codeshare,stops,equipment"
@@ -71,5 +83,3 @@ Przygotowuje dane do wyświetlenia. Usuwam powtarzające się lotnika docelowe.
 ### Stage5 - filtr, wyświetlanie tylko interesujących wyników
 
 Zostawiam tylko lotniska, z których można dostać się do ABB (Asaba International Airport).
-
-### Wynik
