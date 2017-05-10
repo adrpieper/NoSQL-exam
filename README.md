@@ -3,7 +3,7 @@
 
 Nazwa: **Routes**
 
-Źródło: **_[OpenFlights](http://openflights.org/data.htm)_**, 
+Źródło: **_[OpenFlights](http://openflights.org/data.html)_**, 
 **_[Pobierz](https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.dat)_**
 
 Plik: **_routes.dat_**
