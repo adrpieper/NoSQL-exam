@@ -131,9 +131,11 @@ db.routes.createIndex({ "source_airport_id" : 1});
 ```
 Aby porównać szybkość działadania agregacji z i bez i indexu, uruchomiłem ją 10 razy w każdym z wariantów i wyciągnąłem średnią:
 
-_bez indexu_ : 26619 ms, 25952 ms
-_z indexem_ : 14707 ms
-
+   wariant       | średni czas
+:---------------:|------------:
+  bez indexu     |   25952 ms 
+  z indexem      |   14707 ms          
+      
 Dodanie indexu przyśpieszyło działanie agregacji przewie dwuktrotnie.
 
 
