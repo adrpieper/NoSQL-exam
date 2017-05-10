@@ -1,12 +1,13 @@
+db.routes.createIndex({ "source_airport_id" : 1});
 db.routes.aggregate(
     [
     { $match : { stops : 0 }},
     {
     $group :
         {
-        _id : {id :"$source_airport_id",name : "$source_airport"},
-        direct_routes_ids : { $push : "$dest_airport_id" },
-        direct_routes : { $push : "$dest_airport" }
+        _id : {airport_id :"$source_airport_id", name : "$source_airport"},
+        direct_routes_ids : { $addToSet : "$dest_airport_id" },
+        direct_routes : { $addToSet : "$dest_airport" }
         }
     },
     {
@@ -22,10 +23,26 @@ db.routes.aggregate(
    {
         $project :
         {
-            direct_routes : 1,
             destinations : {$setUnion: "$destinations.source_airport"}
         }
    },
-   { $match : { destinations : { $all : ["ABB"] }}}
+   { $match : { destinations : { $all : ["ABB"] }}},
+   {
+      $lookup:
+        {
+          from: "airports",
+          localField: "_id.airport_id",
+          foreignField: "_id",
+          as: "airport_data"
+        }
+   },
+   {
+        $project :
+        {
+            _id : 0,
+            airport : "$_id.name",
+            airport_name : "$airport_data.name"
+        }
+   }
    ]
 );
